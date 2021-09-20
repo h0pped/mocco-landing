@@ -18,5 +18,8 @@ const GlobalStyle = createGlobalStyle`
         text-decoration:none;
         color:#c8a259;
     }
+    span{
+        color:#c8a259
+    }
 `;
 export default GlobalStyle;

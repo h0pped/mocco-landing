@@ -46,7 +46,5 @@ const Title = styled(motion.h2)`
   text-align: center;
   font-size: 3.2rem;
 `;
-const Subtitle = styled(motion.p)`
-  font-size: 1.75rem;
-`;
+const Subtitle = styled(motion.p)``;
 export default Food;

@@ -1,7 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { FullWindow } from "../styles";
+import {
+  FullWindow,
+  Content,
+  TextDiv,
+  Title,
+  StyledDescription,
+  Image,
+} from "../styles";
 import descriptionImage from "../assets/images/description.jpg";
 const Description = () => {
   return (
@@ -34,37 +41,5 @@ const StyledFullWindow = styled(FullWindow)`
 
   transform: translateZ(0);
 `;
-const Content = styled(motion.div)`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-const TextDiv = styled(motion.div)`
-  width: 45%;
-`;
-const Title = styled(motion.h2)`
-  font-size: 2.5rem;
-  font-weight: 200;
-  span {
-    color: #c8a259;
-  }
-`;
-const StyledDescription = styled(motion.p)`
-  font-size: 2rem;
-  margin-top: 10rem;
-  font-weight: lighter;
-`;
-const Image = styled(motion.div)`
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  img {
-    width: 100%;
-    height: 75vh;
-    object-fit: cover;
-  }
-`;
+
 export default Description;
