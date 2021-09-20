@@ -8,11 +8,15 @@ const GlobalStyle = createGlobalStyle`
     }
     body{
         font-family: "Poppins",sans-serif;
-
+        background: #1E1E1E;
     }
     h1{
         font-weight: lighter;
         font-size: 2.7rem;
+    }
+    a{
+        text-decoration:none;
+        color:#c8a259;
     }
 `;
 export default GlobalStyle;

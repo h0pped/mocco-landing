@@ -1,8 +1,9 @@
 import React from "react";
-import { FullWindow } from "../styles";
+import { FullWindow, ScrollDown } from "../styles";
 import moccoBoutiqueImg from "../assets/images/Mocco-boutique.jpeg";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { CaretDown } from "phosphor-react";
 const Title = () => {
   return (
     <StyledFullWindow>
@@ -15,6 +16,9 @@ const Title = () => {
           <Button href="https://google.com">Резервация</Button>
         </Buttons>
       </StyledTitle>
+      <ScrollDown>
+        <CaretDown size={48} />
+      </ScrollDown>
     </StyledFullWindow>
   );
 };
@@ -22,12 +26,29 @@ const StyledFullWindow = styled(FullWindow)`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(2px) brightness(0.5);
+    transform: scale(1.1);
+  }
+  transform: translateZ(0);
 `;
 const StyledTitle = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 8rem;
 `;
 const Buttons = styled(motion.div)`
   margin-top: 3rem;
@@ -48,9 +69,9 @@ const Button = styled(motion.a)`
   background-size: 100% 200%;
   background-image: linear-gradient(to bottom, transparent 50%, #c8a259 50%);
   &:hover {
-    transform: scale(1.08);
     background-position: 0 100%;
     color: rgb(0, 0, 0);
   }
 `;
+
 export default Title;
