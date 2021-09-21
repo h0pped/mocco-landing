@@ -24,6 +24,7 @@ export const Content = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0rem 4rem;
   @media screen and (max-width: 1200px) {
     flex-direction: column;
     padding: 5rem 0rem;
