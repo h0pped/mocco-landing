@@ -3,16 +3,23 @@ import { FullWindow } from "../styles";
 import foodVideo from "../assets/videos/video.mp4";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { classExpression } from "@babel/types";
+import { scrollReveal } from "../animation";
+import { useScroll } from "../useScroll";
 const Food = () => {
+  const [element, controls] = useScroll();
   return (
-    <StyledFullWindow>
+    <StyledFullWindow
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <video autoPlay loop muted>
         <source src={foodVideo} type="video/mp4" />
       </video>
       <Title>
-        Наше <a href="google.com">меню</a> известно разнообразием блюд кухонь со
-        всего мира
+        Наше <a href="https://mocco.kiev.ua/menu/menu.pdf">меню</a> известно
+        разнообразием блюд кухонь со всего мира
       </Title>
       <Subtitle>
         Все они разработаны по авторским рецептам шеф-повара Мариетты Шевчук
@@ -28,12 +35,13 @@ const StyledFullWindow = styled(FullWindow)`
   flex-direction: column;
   font-weight: lighter;
   transform: translatez(0px);
+  background: #1e1e1e;
   video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 
     object-fit: cover;
     z-index: -1;

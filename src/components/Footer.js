@@ -16,9 +16,9 @@ const Footer = () => {
       <Media>
         <a href="https://www.facebook.com/mocco.kiev.ua/">
           <img src={facebook} alt="facebook" />
-          <a href="https://www.instagram.com/mocco_kyiv">
-            <img src={instagram} alt="instagram" />
-          </a>
+        </a>
+        <a href="https://www.instagram.com/mocco_kyiv">
+          <img src={instagram} alt="instagram" />
         </a>
       </Media>
       <Logo>
@@ -28,7 +28,7 @@ const Footer = () => {
   );
 };
 const StyledFooter = styled(motion.div)`
-  height: 15vh;
+  min-height: 15vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -36,6 +36,11 @@ const StyledFooter = styled(motion.div)`
   background: #111;
   color: white;
   padding: 0rem 4rem;
+  @media screen and (max-width: 500px) {
+    padding: 2rem 0;
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 const Contacts = styled(motion.div)`
   display: flex;
@@ -49,6 +54,13 @@ const Contacts = styled(motion.div)`
     color: #f4f4f4;
     font-weight: 300;
   }
+  @media screen and (max-width: 500px) {
+    padding: 0;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
 `;
 const Media = styled(motion.div)`
   display: flex;
@@ -60,6 +72,12 @@ const Media = styled(motion.div)`
       width: 4rem;
     }
   }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    a {
+      margin: 0rem 2rem;
+    }
+  }
 `;
 const Logo = styled(motion.div)`
   width: 33%;
@@ -68,6 +86,10 @@ const Logo = styled(motion.div)`
   a {
     font-size: 2rem;
     font-weight: 200;
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    justify-content: center;
   }
 `;
 export default Footer;

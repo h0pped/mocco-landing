@@ -6,7 +6,6 @@ import Bar from "./components/Bar";
 import Hookah from "./components/Hookah";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
-
 function App() {
   return (
     <div className="App" id="luxy">

@@ -1,16 +1,23 @@
 import React from "react";
-import { FullWindow, ScrollDown } from "../styles";
+import { FullWindow } from "../styles";
 import hookahImage from "../assets/images/hookah.jpg";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { CaretDown } from "phosphor-react";
+import { scrollReveal } from "../animation";
+import { useScroll } from "../useScroll";
 const Hookah = () => {
+  const [element, controls] = useScroll();
   return (
-    <StyledFullWindow>
+    <StyledFullWindow
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <img src={hookahImage} alt="Mocco" />
       <Title>
         Один из главных атрибутов хорошего вечера
-        <a href=""> дымные коктейли</a>
+        <a href="https://mocco.kiev.ua/menu/hookah.pdf"> дымные коктейли</a>
       </Title>
       <StyledSubtitle>
         В <span>MOCCO</span> вы найдете чаши на 12 фруктах, колбы на алкоголе,
