@@ -1,6 +1,6 @@
 # Mocco - boutique restaurant
 
-**[Test it by your own! (In Process)](https://google.com)**
+**[Test it by your own! (Live)](https://awril-mocco.netlify.app/)**
 
 **Used Technologies:**
 
