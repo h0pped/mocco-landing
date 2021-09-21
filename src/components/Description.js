@@ -16,8 +16,8 @@ const Description = () => {
       <Content>
         <TextDiv>
           <Title>
-            <span>МОССО</span> - место людей любящих вкусить жизнь схарактерными
-            ей восторгами
+            <StyledSpan>МОССО</StyledSpan> - место людей любящих вкусить жизнь
+            схарактерными ей восторгами
           </Title>
           <StyledDescription>
             Каждая деталь интерьера и атмосфера выдержанные в лучших традициях
@@ -40,6 +40,9 @@ const StyledFullWindow = styled(FullWindow)`
   padding: 0rem 4rem;
 
   transform: translateZ(0);
+`;
+const StyledSpan = styled.span`
+  font-weight: lighter;
 `;
 
 export default Description;

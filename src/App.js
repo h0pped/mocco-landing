@@ -4,6 +4,8 @@ import Description from "./components/Description";
 import Food from "./components/Food";
 import Bar from "./components/Bar";
 import Hookah from "./components/Hookah";
+import Contacts from "./components/Contacts";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Food />
       <Bar />
       <Hookah />
+      <Contacts />
+      <Footer />
     </div>
   );
 }

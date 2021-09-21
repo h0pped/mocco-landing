@@ -42,7 +42,7 @@ const StyledFullWindow = styled(FullWindow)`
   transform: translateZ(0);
 `;
 const Title = styled(motion.h2)`
-  font-weight: lighter;
+  font-weight: 300;
   width: 80%;
   text-align: center;
   font-size: 3.2rem;

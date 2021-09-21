@@ -27,8 +27,8 @@ export const TextDiv = styled(motion.div)`
   width: 45%;
 `;
 export const Title = styled(motion.h2)`
-  font-size: 2.7rem;
-  font-weight: 400;
+  font-size: 2.5rem;
+  font-weight: 300;
   span {
     color: #c8a259;
   }
